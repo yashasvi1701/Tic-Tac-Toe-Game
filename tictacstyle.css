@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+*{
+    margin:0;
+    padding:0;
+}
+/*styling navbar-----------------------------------------------*/
+nav{
+    background-color: black;
+    color:white;
+    height: 65px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+nav ul{
+    list-style-type: none;
+    padding: 0px 12px;
+    font-family: 'Roboto', sans-serif;
+}
+/*styling container for whole game-------------------------------------------*/
+.gamecontainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+/*styling container for  9-boxes----------------------------------------------*/
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,10vw);
+    grid-template-rows: repeat(3,10vw);
+    font-family: 'Roboto', sans-serif;
+}
+/*styling all boxes-----------------------------------------------------------*/
+.box{
+    border:2px solid black;
+    font-size: 8vw;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover{
+    background-color: grey;
+}
+
+/*styling gameinfo class----------------------------------------------------------*/
+.gameinfo{
+    padding: 0 34px;
+}
+
+.info{
+    font-size: 20px;
+}
+
+.imgbox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+/*utility classes to remove the border------------------------------------------------*/
+.br-0{
+    border-right: 0;
+
+}
+
+.bl-0{
+    border-left: 0;
+}
+
+.bt-0{
+    border-top: 0;
+}
+
+.bb-0{
+    border-bottom:0;
+}
+/*styling reset button--------------------------------------------------------------*/
+#reset{
+    margin: 0px 10px 0px 10px;
+    padding: 3px;
+    background-color: #dccaed;
+    border-radius: 4px;
+    cursor: pointer;
+}
+/*styling to make game responssive--------------------------------------------------*/
+@media screen and (max-width:800px)
+{
+    .gamecontainer{
+        flex-wrap: wrap;
+    }
+    .gameinfo{
+        margin-top: 34px;
+    }
+
+    .gameinfo h1{
+        font-size: 1.5rem;
+    }
+
+    .container{
+        display: grid;
+        grid-template-columns: repeat(3,16vw);
+        grid-template-rows: repeat(3,16vw);
+
+    }
+    
+}
